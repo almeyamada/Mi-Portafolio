@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;}
+
+
+:root {
+  --RussianViolet : rgb(36, 25, 67);
+  --PurpleNavy : hsl(250, 26%, 44%);
+  --Majesty : hsl(266, 32%, 64%);
+  --Cultured : hsl(0, 0%, 81%);
+  --Geometr: "Josefin Sans"; width: 200;
+  --BoldGeometr: "Josefin Sans"; width: 400;}
+
+body{
+    height: 100vh;
+    background-color: var(--Majesty);
+    display: flex;
+    place-content: center;}
+
+.container {
+  display: grid;
+  width: 85%;
+  max-width: 85em;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 8em 1fr 25em 1fr 31.2em 2fr 2fr 8em;
+  grid-template-areas:
+    "nav nav nav"
+    "main main main"
+    "section1 section1 section1"
+    "section2 section2 section2"
+    "section3 section3 section3"
+    "section4 section4 section4"
+    "formulario formulario formulario"
+    "footer footer footer";}
+
+nav{
+    grid-area: nav;
+    background-color: var(--Majesty);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;}
+
+.social{
+    display: flex;
+    align-items: center;}
+
+nav h3{
+    font-family: var(--BoldGeometr);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: var(--RussianViolet);
+    padding: 1.25rem 0.9rem;
+    cursor:default;}
+
+.social a{
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 0.3rem;}
+
+.nav ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;}
+
+.nav ul li a{
+    text-decoration: none;
+    color: var(--RussianViolet);
+    font-family: var(--BoldGeometr);
+    font-size: 1.5rem;}
+
+.nav ul li a:hover{
+    color: var(--PurpleNavy);}
+
+.main{
+    grid-area: main;
+    background-color: var(--RussianViolet);
+    display: flex;
+  
+}
+
+.foto{
+    object-fit: cover;
+    width: 45%;}
+
+.presentacion{
+    width: 37.5rem; 
+    color: var(--Cultured);
+    margin: 2.5rem;
+    padding-top: 1.2rem;
+    text-align: center;
+}
+
+.logo{
+    position: relative;
+    opacity: 50%;
+    width: 40%;}
+
+.presentacion h3{
+    font-family: var(--Geometr);
+    font-size: 2rem;
+    margin-top: 2.5rem;}
+
+.presentacion h1{
+    font-family: var(--BoldGeometr);
+    font-size: 4rem;
+    margin-top: 2.5rem;
+}
+    
+.presentacion h2{
+    font-family: var(--Geometr);
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2.8rem;}
+
+.section{
+    padding: 2.5rem 3.1rem;}
+
+.acerca{
+    grid-area: section1;
+    background-color: var(--PurpleNavy);  
+}
+
+.title{
+    width: 21.8rem ;
+    height: 4.3rem;
+    background-color: var(--RussianViolet);
+    color: var(--Cultured);
+    border-radius: 10px;
+    text-align: center;
+    padding: 1.2rem 0;
+    font-size: 1rem;
+    font-family: var(--BoldGeometr);
+    position: relative;
+    left: -5rem;
+    margin-bottom: 1.8rem;}
+
+.section-content{
+    display: grid;
+    align-content: space-between;
+    align-items: center;
+    height: 65%;  
+}
+
+.text{
+    font-family: var(--Geometr);
+    font-size: 1.2rem;
+    color: var(--Cultured);}
+
+   
+.section-btn{
+    text-align: center;
+    }   
+
+.button{
+    font-family: var(--BoldGeometr);
+    background-color: var(--Majesty);
+    color: var(--RussianViolet);
+    text-transform: uppercase;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1rem; 
+    transition: 0.6s;
+    width: 18.7rem;
+    }
+
+.button:hover{
+    background-color: var(--RussianViolet);
+    color: var(--Cultured);
+    }
+
+.proyectos{
+    grid-area: section2;
+    background-color: var(--Majesty);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.title-proyecto{
+    background-color: var(--RussianViolet);
+    color: var(--Cultured);
+    font-family: var(--BoldGeometr);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.carrousel-content{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    padding-top: 1rem;
+    cursor: pointer;    
+}
+
+.carrousel-content ul{
+    display: flex;
+    width: 400%;
+    animation: slide 15s infinite alternate ease-in-out;
+    
+}
+
+.carrousel-content li{
+    list-style: none;
+    width: 50%;
+    height: 100%;
+}
+
+.carrousel-content li:hover{
+    transform: scale(1.1);
+}
+
+.carrousel-content img{
+    width: 100%;
+    height: 50%;
+    object-fit: scale-down;
+}
+
+ @keyframes slide {
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    55%{margin-left: -100%;}
+
+    60%{margin-left: -200%;}
+    80%{margin-left: -200%;}
+
+    85%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}  
+
+.educacion{
+    grid-area: section3;
+    background-color: var(--Cultured);
+    z-index: -2;}
+
+.container-section3{
+    width: 100%;
+    text-align: center;
+    font-family: var(--Geometr);
+    font-size: 1.5rem;}
+
+.bar{
+    counter-reset: step;}
+
+.bar li{
+    list-style-type: none;
+    float: left;
+    width: 33.33%;
+    position: relative;
+    color: var(--RussianViolet);}
+
+.bar li:before{
+    content: counter(step);
+    counter-increment: step;
+    width: 2.5rem;
+    height:2.5rem;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    margin: 0 auto 0.6rem auto;
+    line-height: 2.3rem;
+    background-color: var(--Majesty);}
+
+.bar li:after{
+    content: '';
+    position:absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--Majesty);
+    top: 1.2rem;
+    left: 0;
+    z-index: -1;}
+
+.conocimiento{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 3rem;
+
+}
+
+.blog{
+    grid-area: section4;
+    background-color: var(--PurpleNavy);
+
+}
+
+.blog-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-top: 3.7rem;
+    gap: 2rem;
+    
+}
+
+.card{
+    width:31.3rem ;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    background-color: var(--RussianViolet);
+    box-shadow: 1px 2px 29px -4px rgba(0,0,0,0.75);
+    border-radius: 8px;
+    
+}
+
+.img-card{
+    width: 50%;
+    object-fit: cover;
+}
+
+.img-card2{
+    width: 50%;
+    background-image: url(2.0.JPG);
+    background-size: contain;    
+}
+
+.card-content{
+    width: 50%;
+    height: 100%;
+    padding: 1.5rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.title-card{
+    font-family: var(--BoldGeometr);
+    font-size: 1.3rem;
+    color: var(--Majesty);
+}
+
+.text-card{
+    font-family: var(--Geometr);
+    font-size: 0.9rem;
+    color: var(--Cultured);
+    text-align: justify;
+    margin: 1.2rem 0;
+}
+
+.btn-card{
+    font-family: var(--BoldGeometr);
+    background-color: var(--Majesty);
+    color: var(--RussianViolet);
+    padding: 0.5rem 0.6rem;
+    border-radius: 1.8rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8rem;  
+    transition: .6s;
+}
+
+.btn-card:hover{
+    background-color: var(--Cultured);
+    transform: scale(1.1);}
+
+.form-content{
+    grid-area: formulario;
+    background-color: var(--RussianViolet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--Cultured);
+    font-family: var(--Geometr);
+    font-size: 1rem;
+}
+
+.form-left{
+    width: 40% ;
+    text-align: center;
+    overflow: hidden;
+}
+.img-form{
+    opacity:50%; 
+    width: 25rem; 
+} 
+
+.form-right{
+    width: 60%;
+}
+ 
+.form-right h2{
+    font-family: var(--BoldGeometr);
+    font-size: 3rem;
+}
+
+.form input{
+    width: 100%;
+    outline: none;
+    padding: 0.5rem;
+    background-color: var(--Cultured);
+    border-radius: 5px;  
+}
+
+.input-line{
+    margin: 1.2rem 0;
+}
+
+.textarea{
+    width: 100%;
+    height: 4.3rem;
+    resize: none;
+    background-color: var(--Cultured);
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+}
+
+.btn-form{
+    width: 100%;
+    padding: 0.6rem 0;
+    background-color: var(--Majesty);
+    color: var(--RussianViolet);
+    font-family: var(--BoldGeometr);
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border: 3px solid var(--Majesty);
+    cursor: pointer;
+}
+
+.btn-form:hover{
+    background-color: var(--RussianViolet);
+    border: 3px solid var(--Cultured);
+    color: var(--Cultured);
+}
+
+.footer-content{
+    grid-area: footer;
+    display: flex;
+    gap: 3.1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.footer-text{
+    background-color: var(--Majesty);
+    font-family: var(--Geometr);
+    font-size: 1rem;
+    color: var(--RussianViolet);
+}
+
+.btn-social a{
+    margin-right: 0.6rem;
+    text-decoration: none;
+    font-size: 3rem;
+    padding: 0.3rem;
+}
+
+a:active{
+    color: var(--Cultured);
+}
+
+@media (max-width: 1200px) {
+    .nav ul li a{ font-size: 1.2rem}
+    .form-left{width: 50%;}
+}
+
+@media (max-width: 992px){
+    .nav ul li a{ font-size: 1.1rem}
+    .nav{flex-direction: column;}
+    .form-left{width: 100%;}
+    .form-right{width: 100%;}
+    .form-content{flex-direction: column;}
+} 
+
+@media (max-width: 768px){
+    .nav ul li a{ font-size: 20px}
+    .text{font-size: 15px;}
+    .carrousel-content ul{width: 800%;}
+    .bar li{font-size:  1rem;}
+} 
+
+@media(max-width: 576px){
+    .text{font-size: 12px;}
+    .nav ul li a{ font-size: 0.9rem}
+    .presentacion h3{ font-size: 1rem;}
+    .presentacion h1{ font-size: 2rem;}
+    .presentacion h2{font-size: 1.5rem;}
+    .button{font-size: 0.7rem;}
+    .carrousel-content{height: 70%;}
+    .carrousel-content ul{width: 800%;}
+    .bar li{font-size:  1rem;}
+    }
+ 
+@media(max-width: 440px){
+    .text{font-size: 9px;}
+    .nav ul li a{ font-size: 0.7rem;}
+    .nav ul li{padding: 0.8rem 0.5rem;}
+    nav h3{font-size: 1.2rem;}
+    .social a{ font-size: 1rem;}
+    .presentacion{margin: 1rem;}
+    .bar li{ font-size: 13px;}
+    .title-card{font-size: 0.8rem;}
+    .text-card{font-size: 0.5rem;}
+    .btn-card{font-size: 0.5rem;}
+    .img-form{width: 10rem;}
+    .footer-text{font-size: 0.6rem;}
+    .btn-social a{font-size: 1.5rem; margin: 0; padding: 0;}
+    .footer-content{gap: 10px;}
+}    
+    
